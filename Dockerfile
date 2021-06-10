@@ -12,9 +12,9 @@ RUN apt install apache2 -y
 
 RUN rm /var/www/html/index.html
 
-COPY /projects/web/index.html /var/www/html/index.html
-COPY /projects/web/prepros-6.config /var/www/html/prepros-6.config
-COPY /projects/web/assets/  /var/www/html/assets/
+COPY index.html /var/www/html/index.html
+COPY prepros-6.config /var/www/html/prepros-6.config
+COPY assets/  /var/www/html/assets/
 
 RUN service apache2 start
 
